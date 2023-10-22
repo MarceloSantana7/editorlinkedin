@@ -144,7 +144,6 @@ button#reset {
     background: #787878;
     display: flex;
     width: 30%;
-    padding: 9px 119px;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
@@ -153,7 +152,6 @@ button#reset {
 button#copy {
     display: flex;
     flex: 1;
-    padding: 9px 119px;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
@@ -232,6 +230,10 @@ button#copy {
     z-index: 99999;
 }
 
+.toastify {
+    font-size: 300%;
+}
+
 /* Toolbar */
 /* Para navegadores WebKit (Chrome, Safari, etc.) */
 ::-webkit-scrollbar {
@@ -289,5 +291,31 @@ body * {
 
     100% {
         transform: initial;
+    }
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 610px) {
+    #emoji-picker {
+        top: 30px;
+        left: -50px;        
+    }   
+}
+
+@media screen and (max-width: 435px) {
+    #emoji-picker {
+        top: 30px;
+        left: -155px;        
+    }   
+    #header_l h1 {
+        font-size: 2rem;
+    }
+    #header_l p {
+        font-size: 1rem;
+    }    
+
+    #buttons button {
+        font-size: 1.4rem;
     }
 }

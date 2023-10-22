@@ -37,15 +37,53 @@ document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("reset").addEventListener("click", function() {
     var textarea = document.getElementById("textbox");
     textarea.value = ''; // Limpar o conteúdo do textarea
+    Toastify({
+      text: "Resetado",
+      duration: 33000,
+      newWindow: true,
+      close: true,
+      gravity: "bottom", // `top` or `bottom`
+      position: "left", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: "linear-gradient(to right, #0367A6, #0367A6)",
+      },
+      onClick: function(){} // Callback after click
+    }).showToast();
 });
 
   document.getElementById("copy").addEventListener("click", function() {
       var textarea = document.getElementById("textbox");
       var textoParaCopiar = textarea.value;
       navigator.clipboard.writeText(textoParaCopiar).then(function() {
-        //alert("Texto copiado com sucesso!");
+        Toastify({
+          text: "Texto copiado!",
+          duration: 33000,
+          newWindow: true,
+          close: true,
+          gravity: "bottom", // `top` or `bottom`
+          position: "center", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "linear-gradient(to right, #0367A6, #0367A6)",
+          },
+          onClick: function(){} // Callback after click
+        }).showToast();
       }).catch(function(err) {
         //alert("Não foi possível copiar o texto: ", err);
+        Toastify({
+          text: "Não foi possível copiar o texto: " + err,
+          duration: 33000,
+          newWindow: true,
+          close: true,
+          gravity: "bottom", // `top` or `bottom`
+          position: "center", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "linear-gradient(to right, #0367A6, #0367A6)",
+          },
+          onClick: function(){} // Callback after click
+        }).showToast();
       });
   });
 
