@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700;9..40,800&family=Inter:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    font-family: 'Roboto', Verdana, sans-serif;
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#header_l {
+    background-color: #0367A6;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+#header_l h1 {
+    color: #fff;
+    font-family: Roboto;
+    font-size: 3rem;
+    line-height: .2rem;
+}
+
+#header_l p {
+    color: #fff;
+    font-family: Roboto;
+    font-size: 1.5rem;
+    line-height: 0.5rem;
+}
+
+main {
+    margin-top: -170px;
+    background-color: FFFFFF;
+    width: 80%;
+    max-width: 1000px;
+    height: 505px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+#editor {
+    background: #0367A6;
+    border-radius: 3px;
+    border: 1px solid #0367A6;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#editor .toolbar {
+    border: 2px solid #0367A6;
+    background: #0367A6;
+    width: 100%;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+}
+
+#editor .toolbar div {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#editor .toolbar div {
+    border-right: 1px solid #ffffff25;
+}
+
+#editor .toolbar div:hover {
+    cursor: pointer
+}
+
+#editor .toolbar div svg {
+    height: 30px;
+}
+
+#cardText {
+    width: 100%;
+    height: 82%;
+    flex-shrink: 0;
+    border-radius: 8px 8px 3px 3px;
+    border: 2px solid #0367A6;
+    background: #FFF;
+    padding: 15px;
+    z-index: 1;
+}
+
+#cardText textarea {
+    border: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    resize: none;
+    outline: none;
+}
+
+#buttons {
+    width: 100%;
+    display: flex;
+    flex: 1;
+    margin-top: -2px;
+}
+
+#buttons button {
+    outline: 0;
+    border: 0;
+    font-size: 2rem;
+    color: #fff;
+}
+
+#buttons button:hover {
+    cursor: pointer;
+}
+
+button#reset {
+    border-radius: 0px 0px 0px 5px;
+    background: #787878;
+    display: flex;
+    width: 30%;
+    padding: 9px 119px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+button#copy {
+    display: flex;
+    flex: 1;
+    padding: 9px 119px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 0px 0px 5px 0px;
+    background: #0367A6;
+}
+
+#marks {
+    position: relative;
+    z-index: 999;
+}
+
+#marks:hover .menuFlutuante {
+    display: flex;
+}
+
+#emojis {
+    position: relative;
+}
+
+
+.menuFlutuante {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none !important;
+    padding: 8px 18px;
+    background-color: #16161b;
+    border-radius: 10px;
+    position: absolute;
+    left: 0px;
+    z-index: 100;
+    top: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    margin-left: 30px;
+    border: 1px !important;
+    border-style: solid !important;
+    border-color: rgb(42, 42, 43) !important;
+}
+
+.menuFlutuante .menu-item {
+    height: 40px;
+    width: 40px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuFlutuante button {
+    outline: 0;
+    border: 0;
+    background: none;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.menuFlutuante button:hover {
+    color: #0056b3;
+    cursor: pointer;
+}
+
+#emoji-trigger {
+    display: relative;
+}
+
+#emoji-picker {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 40px;
+    z-index: 99999;
+}
+
+/* Toolbar */
+/* Para navegadores WebKit (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+    width: 12px;
+    /* Largura da barra de rolagem */
+    border-radius: 6px;
+    pointer-events: none;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #90c6ff;
+    /* Cor de fundo da trilha da barra de rolagem */
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0056b3;
+    /* Cor do polegar da barra de rolagem */
+    border-radius: 6px;
+    /* Arredondar os cantos do polegar */
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+    cursor: default;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+    /* Força o ícone do mouse a permanecer como uma seta padrão */
+}
+
+::-webkit-scrollbar:hover {
+    cursor: pointer;
+    /* Força o ícone do mouse a permanecer como uma seta padrão */
+}
+
+/* Para Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #0056b3 #007BFF;
+}
+
+/* Transitions */
+
+body * {
+    transition: all .1s linear;
+    animation: left 0.5s ease forwards;
+}
+
+@keyframes left {
+    0% {
+        transform: translatey(10px);
+    }
+
+    100% {
+        transform: initial;
+    }
+}
