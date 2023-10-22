@@ -49,21 +49,21 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   });
 
-  const menuFlutuante = document.querySelector('.menuFlutuante');
-
-  menuFlutuante.querySelectorAll('button').forEach((botao) => {
-    botao.addEventListener('click', function(evento) {
-      const id = evento.target.id.replace(/\D/g, '');
-      const nomeFuncao = `setTextToCurrentPos${id}`;
-  
-      if (typeof window[nomeFuncao] === 'function') {
-        window[nomeFuncao]();
-      } else {
-        console.error(`A função ${nomeFuncao} não foi encontrada.`);
-      }
-    });
-  });
-  
+  document.querySelector("#pos1").addEventListener('click', ()=>setTextToCurrentPos1());
+  document.querySelector("#pos2").addEventListener('click', ()=>setTextToCurrentPos2());
+  document.querySelector("#pos3").addEventListener('click', ()=>setTextToCurrentPos3());
+  document.querySelector("#pos4").addEventListener('click', ()=>setTextToCurrentPos4());
+  document.querySelector("#pos5").addEventListener('click', ()=>setTextToCurrentPos5());
+  document.querySelector("#pos6").addEventListener('click', ()=>setTextToCurrentPos6());
+  document.querySelector("#pos7").addEventListener('click', ()=>setTextToCurrentPos7());
+  document.querySelector("#pos8").addEventListener('click', ()=>setTextToCurrentPos8());
+  document.querySelector("#pos9").addEventListener('click', ()=>setTextToCurrentPos9());
+  document.querySelector("#pos10").addEventListener('click', ()=>setTextToCurrentPos10());
+  document.querySelector("#pos11").addEventListener('click', ()=>setTextToCurrentPos11());
+  document.querySelector("#pos12").addEventListener('click', ()=>setTextToCurrentPos12());
+  document.querySelector("#pos13").addEventListener('click', ()=>setTextToCurrentPos13());
+  document.querySelector("#pos14").addEventListener('click', ()=>setTextToCurrentPos14());
+  document.querySelector("#pos15").addEventListener('click', ()=>setTextToCurrentPos15());
 
 
 const boldSansCharMap = {
