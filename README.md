@@ -23,6 +23,9 @@ Libs adicionais:
 - emoji-mart
 - toastify
 
+## Deploy
+
+https://marcelosantana7.github.io/editorlinkedin/
 
 ## Contribuição
 
